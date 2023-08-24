@@ -18,7 +18,7 @@ results = search(searchKeyWord, num_results=int(totalNoOfRecords))
 # Convert result into data frame.
 df = pd.DataFrame(results)
 now = datetime.now()
-outputFileName = 'SearchOutput' + now.strftime("%d-%m-%Y") + '.csv'
+outputFileName = 'input_urls.csv'
 # Write output in CSV format.
 df.to_csv(outputFileName,mode='a', encoding='utf-8', index=False , header=False)
 print('================================================\n')
